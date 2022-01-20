@@ -1,4 +1,4 @@
-# ArmTTS 
+# ArmTTS {#mainpage}
 
 ML based Text-to-Speech(TTS) C++ library for the Armenian language (light version, only CPU and Tensorflow Lite).
 The full version is available here: [Text-to-Speech (TTS) Engine for the Armenian Language](https://armtts.online).
