@@ -1,0 +1,12 @@
+prefix=/usr/local
+libraries_path=${prefix}/lib
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+third_party_libs="-lboost_filesystem -ltensorflow-lite -lcpuinfo -lclog -lpthreadpool -lflatbuffers -lruy -lXNNPACK -lfarmhash -lfft2d_fftsg -lfft2d_fftsg2d -lorocos-log4cpp -lfftw3f -lsndfile"
+
+Name: ArmTTS
+Description: ML based Text-to-Speech(TTS) engine for the Armenian language
+Version: 1.0.0
+Libs: -larmtts -linference_engine -lphonetic_engine -lutilities -llogger ${third_party_libs}
+Cflags: -I${includedir}

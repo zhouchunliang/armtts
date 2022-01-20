@@ -1,0 +1,27 @@
+set(SUB_PROJECT_NAME unit_tests)
+
+file(GLOB SOURCES "src/*.c" "src/*.cpp")
+add_executable(${SUB_PROJECT_NAME} ${SOURCES})
+add_dependencies(${SUB_PROJECT_NAME}
+        armtts
+        phonetic_engine
+        inference_engine
+        gtest
+        fftw
+)
+
+target_link_directories(${SUB_PROJECT_NAME} PUBLIC
+        ${GTEST_LIB_DIR}
+        ${FFTW_LIB_DIR}
+)
+target_link_libraries(${SUB_PROJECT_NAME} LINK_PUBLIC
+        armtts
+        phonetic_engine
+        inference_engine
+        ${GTEST_LIBRARIES}
+        ${FFTW_LIBRARIES}
+)
+target_include_directories(${SUB_PROJECT_NAME} PUBLIC
+        ${GTEST_INCLUDE_DIR}
+        ${FFTW_INCLUDE_DIR}
+)
